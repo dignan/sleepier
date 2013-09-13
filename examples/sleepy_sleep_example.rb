@@ -1,6 +1,6 @@
 require 'sleepy'
 
-supervisor = Sleepy::Supervisor.new(3)
+supervisor = Sleepier::Supervisor.new(3)
 supervisor.start
 begin
     supervisor.monitor

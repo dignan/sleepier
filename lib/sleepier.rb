@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'logger'
 
-module Sleepy
+module Sleepier
     class Supervisor < Object
         def initialize(sub_processes)
             @sub_processes = sub_processes
