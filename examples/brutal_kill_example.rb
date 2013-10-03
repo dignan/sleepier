@@ -6,12 +6,17 @@ fn = Proc.new do |name|
   puts("Goodbye world")
 end
 
-spec = Sleepier::ChildSpec.new('hello_goodbye', fn, ['pat'], :transient, :brutal_kill)
+spec = Sleepier::ChildSpec.new('brootle', fn, ['pat'], :transient, :brutal_kill)
 supervisor = Sleepier::Supervisor.new([spec], :one_for_one)
 supervisor.start
 
 begin
-    supervisor.monitor
+    sup = Thread.new do
+      supervisor.monitor
+    end
+    
+    supervisor.terminate_child('brootle')
+    sup.join
 rescue Interrupt
     puts("Caught interrupt, quitting")
 end
