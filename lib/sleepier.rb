@@ -6,6 +6,16 @@ module Sleepier
     VALID_RESTART_OPTIONS = [:permanent, :temporary, :transient]
     VALID_SHUTDOWN_OPTIONS = [:brutal_kill, :timeout, :infinity]
 
+    @@logger = Logger.new(STDOUT)
+
+    def self.logger
+      @@logger
+    end
+
+    def self.logger=(logger)
+      @@logger = logger
+    end
+
     class ChildSpec < Object
 
         attr_accessor :child_id, :start_func, :args, :restart, :shutdown, :pid, :terminating, :shutdown_timeout
@@ -104,7 +114,7 @@ module Sleepier
                 raise Exception.new('Invalid restart strategy')
             end
 
-            @log = Logger.new(STDOUT)
+            @started = false
         end
 
         def monitor
@@ -112,8 +122,10 @@ module Sleepier
                 begin
                     pid, status = Process.wait2
                 rescue Errno::ECHILD
-                    @log.warn("No children, exiting")
-                    break
+                    if @started
+                        Sleepier.logger.warn("No children, exiting")
+                        break
+                    end
                 end
 
                 self.handle_finished_process(pid, status)
@@ -124,6 +136,7 @@ module Sleepier
             @child_specs.each do |child_id, child_spec|
                 self.start_process(child_id)
             end
+            @started = true
         end
 
         def start_new_child(child_spec)
@@ -158,7 +171,7 @@ module Sleepier
                         self.start_process(child_id)
                         return true
                     else
-                        @log.info("#{child_spec.restart.to_s.capitalize} child #{child_spec.child_id} finished.  Will not be restarted")
+                        Sleepier.logger.info("#{child_spec.restart.to_s.capitalize} child #{child_spec.child_id} finished.  Will not be restarted")
                         return false
                     end
                 end
@@ -172,7 +185,7 @@ module Sleepier
             end
 
             child_spec.pid = pid
-            @log.info("Started #{child_spec.child_id} with pid #{pid}")
+            Sleepier.logger.info("Started #{child_spec.child_id} with pid #{pid}")
         end
     end
 end

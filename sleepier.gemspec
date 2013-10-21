@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'sleepier'
-  s.version     = '0.0.0'
+  s.version     = '0.0.1'
   s.date        = '2013-09-13'
   s.summary     = "Simple process monitoring"
   s.description = "Sleepily managing processes"
