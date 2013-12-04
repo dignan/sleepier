@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Sleepier::Supervisor
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Sleepier.html" title="Sleepier (module)">Sleepier</a></span></span>
+     &raquo; 
+    <span class="title">Supervisor</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Sleepier::Supervisor
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Sleepier::Supervisor</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/sleepier.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="VALID_RESTART_STRATEGIES-constant" class="">VALID_RESTART_STRATEGIES =
+          <div class="docstring">
+  <div class="discussion">
+    
+  <div class="note todo">
+    <strong>TODO:</strong>
+    <div class='inline'><p>implement strategies other than :one_for_one</p>
+</div>
+  </div>
+
+<p>Determines how to handle restarts for all processes supervised</p>
+
+<ul>
+<li>:one_for_one - Only restart the process that failed if one process terminates</li>
+<li>:one_for_all - Restart all processes if one process terminates</li>
+<li>:rest_for_one - Restart all processes after the process, in the order they started, that terminates as well as the process that terminated</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span><span class='symbol'>:one_for_one</span><span class='comma'>,</span> <span class='symbol'>:one_for_all</span><span class='comma'>,</span> <span class='symbol'>:rest_for_one</span><span class='comma'>,</span> <span class='symbol'>:simple_one_for_one</span><span class='rbracket'>]</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_finished_process-instance_method" title="#handle_finished_process (instance method)">- (true, false) <strong>handle_finished_process</strong>(pid, status) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Internal function that handles a process finishing.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Supervisor) <strong>initialize</strong>(child_specs, restart_strategy, max_restart_count = 3, max_restart_window = 5) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Create the supervisor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#monitor-instance_method" title="#monitor (instance method)">- (Object) <strong>monitor</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Watches for processes to terminate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start-instance_method" title="#start (instance method)">- (Object) <strong>start</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Start all the child processes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_new_child-instance_method" title="#start_new_child (instance method)">- (Object) <strong>start_new_child</strong>(child_spec) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Add a new child process and start it.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_process-instance_method" title="#start_process (instance method)">- (Object) <strong>start_process</strong>(child_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Internal function used by <code>start_new_child</code> and <code>start</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#terminate_child-instance_method" title="#terminate_child (instance method)">- (Object) <strong>terminate_child</strong>(child_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Starts termination of a process.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Sleepier::Supervisor (class)">Supervisor</a></span></tt>) <strong>initialize</strong>(child_specs, restart_strategy, max_restart_count = 3, max_restart_window = 5) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Create the supervisor.  Does <em>not</em> start it.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>child_specs</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ChildSpec.html" title="Sleepier::ChildSpec (class)">Sleepier::ChildSpec</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>What processes to start and monitor</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>restart_strategy</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="#VALID_RESTART_STRATEGIES-constant" title="Sleepier::Supervisor::VALID_RESTART_STRATEGIES (constant)">VALID_RESTART_STRATEGIES</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Managing how restarts are handled for the group of processes</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max_restart_count</span>
+      
+      
+        <span class='type'>(<tt>int</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>3</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>How many times within <code>max_restart_window</code> a process can restart.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max_restart_window</span>
+      
+      
+        <span class='type'>(<tt>int</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>5</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>A moving window in seconds during which a process may terminate <code>max_restart_count</code> times before the supervisor gives up.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_child_specs'>child_specs</span><span class='comma'>,</span> <span class='id identifier rubyid_restart_strategy'>restart_strategy</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_count'>max_restart_count</span><span class='op'>=</span><span class='int'>3</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_window'>max_restart_window</span><span class='op'>=</span><span class='int'>5</span><span class='rparen'>)</span>
+    <span class='ivar'>@child_specs</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_child_specs'>child_specs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='op'>|</span> <span class='ivar'>@child_specs</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='rbrace'>}</span>
+
+    <span class='ivar'>@max_restart_count</span> <span class='op'>=</span> <span class='id identifier rubyid_max_restart_count'>max_restart_count</span>
+    <span class='ivar'>@max_restart_window</span> <span class='op'>=</span> <span class='id identifier rubyid_max_restart_window'>max_restart_window</span>
+
+    <span class='kw'>if</span> <span class='const'>VALID_RESTART_STRATEGIES</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_restart_strategy'>restart_strategy</span><span class='rparen'>)</span>
+        <span class='ivar'>@restart_strategy</span> <span class='op'>=</span> <span class='id identifier rubyid_restart_strategy'>restart_strategy</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Exception</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Invalid restart strategy</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='ivar'>@started</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="handle_finished_process-instance_method">
+  
+    - (<tt>true</tt>, <tt>false</tt>) <strong>handle_finished_process</strong>(pid, status) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Internal function that handles a process finishing</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>pid</span>
+      
+      
+        <span class='type'>(<tt>int</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The pid of the finished process, used to find the right child process</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>status</span>
+      
+      
+        <span class='type'>(<tt>int</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Status code.  0 is normal, anything else is abnormal termination</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Returns true if the process should have been restarted and was, false otherwise</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 231</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle_finished_process'>handle_finished_process</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
+    <span class='ivar'>@child_specs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_child_id'>child_id</span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span> <span class='op'>==</span> <span class='id identifier rubyid_pid'>pid</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_should_restart?'>should_restart?</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='ivar'>@max_restart_count</span><span class='comma'>,</span> <span class='ivar'>@max_restart_window</span><span class='rparen'>)</span>
+                <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_restarted'>restarted</span>
+                <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_start_process'>start_process</span><span class='lparen'>(</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rparen'>)</span>
+                <span class='kw'>return</span> <span class='kw'>true</span>
+            <span class='kw'>else</span>
+                <span class='const'>Sleepier</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_capitalize'>capitalize</span><span class='rbrace'>}</span><span class='tstring_content'> child </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbrace'>}</span><span class='tstring_content'> finished.  Will not be restarted</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                <span class='kw'>return</span> <span class='kw'>false</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="monitor-instance_method">
+  
+    - (<tt>Object</tt>) <strong>monitor</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>This may be called before calling start to minimize chances of a process terminating before monitoring starts</p>
+</div>
+  </div>
+
+<p>Watches for processes to terminate.  Sends the pid and status returned by the process to <code>handle_finished_process</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 170</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_monitor'>monitor</span>
+    <span class='kw'>while</span> <span class='kw'>true</span>
+        <span class='kw'>begin</span>
+            <span class='id identifier rubyid_pid'>pid</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_wait2'>wait2</span>
+        <span class='kw'>rescue</span> <span class='const'>Errno</span><span class='op'>::</span><span class='const'>ECHILD</span>
+            <span class='kw'>if</span> <span class='ivar'>@started</span>
+                <span class='const'>Sleepier</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>No children, exiting</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+                <span class='kw'>break</span>
+            <span class='kw'>end</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_handle_finished_process'>handle_finished_process</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Start all the child processes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188
+189
+190
+191</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 186</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span>
+    <span class='ivar'>@child_specs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_child_id'>child_id</span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='op'>|</span>
+        <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_start_process'>start_process</span><span class='lparen'>(</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@started</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_new_child-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_new_child</strong>(child_spec) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Add a new child process and start it</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>child_spec</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="ChildSpec.html" title="Sleepier::ChildSpec (class)">Sleepier::ChildSpec</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>spec to use and start</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+196
+197
+198
+199</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 196</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_new_child'>start_new_child</span><span class='lparen'>(</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='rparen'>)</span>
+    <span class='ivar'>@child_specs</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_child_spec'>child_spec</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_start_process'>start_process</span><span class='lparen'>(</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_process-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_process</strong>(child_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Internal function used by <code>start_new_child</code> and <code>start</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+247
+248
+249
+250
+251
+252
+253
+254
+255</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 247</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_process'>start_process</span><span class='lparen'>(</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_child_spec'>child_spec</span> <span class='op'>=</span> <span class='ivar'>@child_specs</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_pid'>pid</span> <span class='op'>=</span> <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_fork'>fork</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_start_func'>start_func</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='op'>*</span><span class='lparen'>(</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span> <span class='op'>=</span> <span class='id identifier rubyid_pid'>pid</span>
+    <span class='const'>Sleepier</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Started </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbrace'>}</span><span class='tstring_content'> with pid </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_pid'>pid</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="terminate_child-instance_method">
+  
+    - (<tt>Object</tt>) <strong>terminate_child</strong>(child_id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note todo">
+    <strong>TODO:</strong>
+    <div class='inline'><p>Add a callback for when the process finishes here</p>
+</div>
+  </div>
+
+<p>Starts termination of a process.  This does <em>not</em> wait for the process to finish.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>child_id</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Which child to terminate</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 206</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_terminate_child'>terminate_child</span><span class='lparen'>(</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_child_spec'>child_spec</span> <span class='op'>=</span> <span class='ivar'>@child_specs</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_terminating'>terminating</span> <span class='op'>=</span> <span class='kw'>true</span>
+
+    <span class='kw'>case</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_shutdown'>shutdown</span>
+    <span class='kw'>when</span> <span class='symbol'>:brutal_kill</span>
+        <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KILL</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='symbol'>:timeout</span>
+        <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TERM</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+
+        <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span>
+            <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_shutdown_timeout'>shutdown_timeout</span><span class='rparen'>)</span>
+            <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>KILL</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+    <span class='kw'>when</span> <span class='symbol'>:infinity</span>
+       <span class='const'>Process</span><span class='period'>.</span><span class='id identifier rubyid_kill'>kill</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TERM</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_pid'>pid</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Dec  4 18:01:55 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

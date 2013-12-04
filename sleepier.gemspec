@@ -10,4 +10,6 @@ Gem::Specification.new do |s|
   s.homepage    =
     'http://rubygems.org/gems/sleepier'
   s.license       = 'MIT'
+  s.requirements << 'yard'
+  s.requirements << 'redcarpet'
 end

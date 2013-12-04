@@ -1,0 +1,1475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Sleepier::ChildSpec
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Sleepier.html" title="Sleepier (module)">Sleepier</a></span></span>
+     &raquo; 
+    <span class="title">ChildSpec</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Sleepier::ChildSpec
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Sleepier::ChildSpec</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/sleepier.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Specifies the properties of the child process to be launched</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#args-instance_method" title="#args (instance method)">- (Object) <strong>args</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute args.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#child_id-instance_method" title="#child_id (instance method)">- (Object) <strong>child_id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute child_id.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pid-instance_method" title="#pid (instance method)">- (Object) <strong>pid</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute pid.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restart-instance_method" title="#restart (instance method)">- (Object) <strong>restart</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute restart.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shutdown-instance_method" title="#shutdown (instance method)">- (Object) <strong>shutdown</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute shutdown.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shutdown_timeout-instance_method" title="#shutdown_timeout (instance method)">- (Object) <strong>shutdown_timeout</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute shutdown_timeout.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_func-instance_method" title="#start_func (instance method)">- (Object) <strong>start_func</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute start_func.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#terminating-instance_method" title="#terminating (instance method)">- (Object) <strong>terminating</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the value of attribute terminating.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#allows_restart%3F-instance_method" title="#allows_restart? (instance method)">- (Boolean) <strong>allows_restart?</strong>(status_code) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#child%3F-instance_method" title="#child? (instance method)">- (Boolean) <strong>child?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (ChildSpec) <strong>initialize</strong>(child_id, start_func, args, restart, shutdown, is_supervisor = false, shutdown_timeout = 0) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Create a new <code>ChildSpec</code>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restarted-instance_method" title="#restarted (instance method)">- (Object) <strong>restarted</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Used to notify the child spec that it has been restarted, and when.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#restarts_within_window-instance_method" title="#restarts_within_window (instance method)">- (Object) <strong>restarts_within_window</strong>(max_restart_window) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Counts how many restarts have happened within the last <code>max_restart_window</code> seconds, and clears out old failures.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#should_restart%3F-instance_method" title="#should_restart? (instance method)">- (true, false) <strong>should_restart?</strong>(status_code, max_restart_count, max_restart_window) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Called by the supervisor to check whether the process should be restarted.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#supervisor%3F-instance_method" title="#supervisor? (instance method)">- (Boolean) <strong>supervisor?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#too_many_restarts%3F-instance_method" title="#too_many_restarts? (instance method)">- (Boolean) <strong>too_many_restarts?</strong>(max_restart_count, max_restart_window) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Sleepier::ChildSpec (class)">ChildSpec</a></span></tt>) <strong>initialize</strong>(child_id, start_func, args, restart, shutdown, is_supervisor = false, shutdown_timeout = 0) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Create a new <code>ChildSpec</code></p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>child_id</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Unique id associated with this specification.  This can be used to terminate the process</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>start_func</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The function run by the process</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>args</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The list of arguments passed to the function.  If there are none, pass it an empty <code>Array</code></p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>restart</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Sleepier.html#VALID_RESTART_OPTIONS-constant" title="Sleepier::VALID_RESTART_OPTIONS (constant)">VALID_RESTART_OPTIONS</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>One of the <code>VALID_RESTART_OPTIONS</code> that determines how to handle restarts</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>shutdown</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Sleepier.html#VALID_SHUTDOWN_OPTIONS-constant" title="Sleepier::VALID_SHUTDOWN_OPTIONS (constant)">VALID_SHUTDOWN_OPTIONS</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>One of the <code>VALID_SHUTDOWN_OPTIONS</code> that determines how to shutdown the process</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>is_supervisor</span>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Is the child a supervisor itself?!  Potentially useful for trees of supervisors</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>shutdown_timeout</span>
+      
+      
+        <span class='type'>(<tt>int</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>If <code>shutdown</code> is <code>:timeout</code>, this is how long to wait before brutally killing the process</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_child_id'>child_id</span><span class='comma'>,</span> <span class='id identifier rubyid_start_func'>start_func</span><span class='comma'>,</span> <span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='id identifier rubyid_restart'>restart</span><span class='comma'>,</span> <span class='id identifier rubyid_shutdown'>shutdown</span><span class='comma'>,</span> <span class='id identifier rubyid_is_supervisor'>is_supervisor</span><span class='op'>=</span><span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_shutdown_timeout'>shutdown_timeout</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span>
+    <span class='ivar'>@child_id</span> <span class='op'>=</span> <span class='id identifier rubyid_child_id'>child_id</span>
+    <span class='ivar'>@start_func</span> <span class='op'>=</span> <span class='id identifier rubyid_start_func'>start_func</span>
+    <span class='ivar'>@args</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span>
+    <span class='ivar'>@restart</span> <span class='op'>=</span> <span class='id identifier rubyid_restart'>restart</span>
+    <span class='ivar'>@shutdown</span> <span class='op'>=</span> <span class='id identifier rubyid_shutdown'>shutdown</span>
+    <span class='ivar'>@is_supervisor</span> <span class='op'>=</span> <span class='id identifier rubyid_is_supervisor'>is_supervisor</span>
+    <span class='ivar'>@shutdown_timeout</span> <span class='op'>=</span> <span class='id identifier rubyid_shutdown_timeout'>shutdown_timeout</span>
+    <span class='ivar'>@pid</span> <span class='op'>=</span> <span class='kw'>nil</span>
+
+    <span class='comment'># Array of timestamps of restarts.  Used for checking restarts
+</span>    <span class='ivar'>@failures</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='comment'># Used for
+</span>    <span class='ivar'>@terminating</span> <span class='op'>=</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="args=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="args-instance_method">
+  
+    - (<tt>Object</tt>) <strong>args</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute args</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_args'>args</span>
+  <span class='ivar'>@args</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="child_id=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="child_id-instance_method">
+  
+    - (<tt>Object</tt>) <strong>child_id</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute child_id</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_child_id'>child_id</span>
+  <span class='ivar'>@child_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="pid=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="pid-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pid</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute pid</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pid'>pid</span>
+  <span class='ivar'>@pid</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="restart=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="restart-instance_method">
+  
+    - (<tt>Object</tt>) <strong>restart</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute restart</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_restart'>restart</span>
+  <span class='ivar'>@restart</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="shutdown=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="shutdown-instance_method">
+  
+    - (<tt>Object</tt>) <strong>shutdown</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute shutdown</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shutdown'>shutdown</span>
+  <span class='ivar'>@shutdown</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="shutdown_timeout=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="shutdown_timeout-instance_method">
+  
+    - (<tt>Object</tt>) <strong>shutdown_timeout</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute shutdown_timeout</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shutdown_timeout'>shutdown_timeout</span>
+  <span class='ivar'>@shutdown_timeout</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="start_func=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="start_func-instance_method">
+  
+    - (<tt>Object</tt>) <strong>start_func</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute start_func</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_func'>start_func</span>
+  <span class='ivar'>@start_func</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="terminating=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="terminating-instance_method">
+  
+    - (<tt>Object</tt>) <strong>terminating</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the value of attribute terminating</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_terminating'>terminating</span>
+  <span class='ivar'>@terminating</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="allows_restart?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>allows_restart?</strong>(status_code) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_allows_restart?'>allows_restart?</span><span class='lparen'>(</span><span class='id identifier rubyid_status_code'>status_code</span><span class='rparen'>)</span>
+    <span class='kw'>case</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span>
+    <span class='kw'>when</span> <span class='symbol'>:permanent</span>
+        <span class='kw'>true</span>
+    <span class='kw'>when</span> <span class='symbol'>:temporary</span>
+        <span class='kw'>false</span>
+    <span class='kw'>when</span> <span class='symbol'>:transient</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_status_code'>status_code</span> <span class='op'>==</span> <span class='int'>0</span>
+            <span class='kw'>false</span>
+        <span class='kw'>else</span>
+            <span class='kw'>true</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="child?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>child?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_child?'>child?</span>
+    <span class='op'>!</span><span class='ivar'>@is_supervisor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="restarted-instance_method">
+  
+    - (<tt>Object</tt>) <strong>restarted</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Used to notify the child spec that it has been restarted, and when.  This allows tracking of
+how many recent restarts the child spec has had.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_restarted'>restarted</span>
+    <span class='ivar'>@failures</span> <span class='op'>&lt;&lt;</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="restarts_within_window-instance_method">
+  
+    - (<tt>Object</tt>) <strong>restarts_within_window</strong>(max_restart_window) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Counts how many restarts have happened within the last <code>max_restart_window</code> seconds, and
+clears out old failures.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_restarts_within_window'>restarts_within_window</span><span class='lparen'>(</span><span class='id identifier rubyid_max_restart_window'>max_restart_window</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_failures_within_window'>failures_within_window</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_now'>now</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='id identifier rubyid_new_failures'>new_failures</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='ivar'>@failures</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='id identifier rubyid_f'>f</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_max_restart_window'>max_restart_window</span>
+            <span class='id identifier rubyid_failures_within_window'>failures_within_window</span> <span class='op'>+=</span> <span class='int'>1</span>
+            <span class='id identifier rubyid_new_failures'>new_failures</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_f'>f</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+
+    <span class='comment'># Update the failures array to only include things currently within the window
+</span>    <span class='ivar'>@failures</span> <span class='op'>=</span> <span class='id identifier rubyid_new_failures'>new_failures</span>
+
+    <span class='comment'># Return the current number of failures within the window
+</span>    <span class='id identifier rubyid_failures_within_window'>failures_within_window</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="should_restart?-instance_method">
+  
+    - (<tt>true</tt>, <tt>false</tt>) <strong>should_restart?</strong>(status_code, max_restart_count, max_restart_window) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Called by the supervisor to check whether the process should be restarted.  Checks whether the process has been restarted
+more than <code>max_restart_count</code> times in <code>max_restart_window</code> seconds, and whether the <code>shutdown</code> type even
+allows restarts</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>true</tt>, <tt>false</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_should_restart?'>should_restart?</span><span class='lparen'>(</span><span class='id identifier rubyid_status_code'>status_code</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_count'>max_restart_count</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_window'>max_restart_window</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_too_many_restarts?'>too_many_restarts?</span><span class='lparen'>(</span><span class='id identifier rubyid_max_restart_count'>max_restart_count</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_window'>max_restart_window</span><span class='rparen'>)</span>
+        <span class='kw'>false</span>
+    <span class='kw'>elsif</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_allows_restart?'>allows_restart?</span><span class='lparen'>(</span><span class='id identifier rubyid_status_code'>status_code</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='ivar'>@terminating</span>
+        <span class='kw'>true</span>
+    <span class='kw'>else</span>
+        <span class='kw'>false</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="supervisor?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>supervisor?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_supervisor?'>supervisor?</span>
+    <span class='ivar'>@is_supervisor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="too_many_restarts?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>too_many_restarts?</strong>(max_restart_count, max_restart_window) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 109</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_too_many_restarts?'>too_many_restarts?</span><span class='lparen'>(</span><span class='id identifier rubyid_max_restart_count'>max_restart_count</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_window'>max_restart_window</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_max_restart_count'>max_restart_count</span> <span class='op'>&lt;=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_restarts_within_window'>restarts_within_window</span><span class='lparen'>(</span><span class='id identifier rubyid_max_restart_window'>max_restart_window</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Wed Dec  4 18:01:55 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>
