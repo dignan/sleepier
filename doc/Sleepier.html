@@ -84,7 +84,38 @@
 </dl>
 <div class="clear"></div>
 
-<h2>Defined Under Namespace</h2>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Sleepier is a Process Management tool in the style of a supervisor.  It most similar to the Erlang supervisor behaviour.</p>
+
+<p>The basic usage of Sleepier is:</p>
+
+<ol>
+<li>Create an <code>Array</code> of <code>Sleepier::ChildSpec</code> objects</li>
+<li>Initialize a <code>Sleepier::Supervisor</code> object with the array of <code>Sleepier::ChildSpec</code> objects</li>
+<li>Create a new <code>Thread</code> and call <code>monitor</code> on the supervisor object within the thread</li>
+<li>Call <code>start</code> on the supervisor</li>
+</ol>
+
+<p>Note that <code>start</code> will return as soon as the processes are started, and does not wait for them to finish.</p>
+
+<p>Features:</p>
+
+<ul>
+<li>Starting and stopping processes</li>
+<li>Rapid termination handling</li>
+<li>Several process shutdown strategies</li>
+<li>Different process lifecycles</li>
+<li>Pluggable logging</li>
+</ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
 <p class="children">
   
     
@@ -243,12 +274,12 @@
       <pre class="lines">
 
 
-23
-24
-25</pre>
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 41</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span>
   <span class='cvar'>@@logger</span>
@@ -302,12 +333,12 @@
       <pre class="lines">
 
 
-30
-31
-32</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_logger='>logger=</span><span class='lparen'>(</span><span class='id identifier rubyid_logger'>logger</span><span class='rparen'>)</span>
   <span class='cvar'>@@logger</span> <span class='op'>=</span> <span class='id identifier rubyid_logger'>logger</span>
@@ -322,7 +353,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Dec  4 18:01:55 2013 by
+  Generated on Thu Dec  5 12:50:08 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.2).
 </div>

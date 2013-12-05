@@ -2,6 +2,24 @@
 require 'logger'
 require 'date'
 
+# Sleepier is a Process Management tool in the style of a supervisor.  It most similar to the Erlang supervisor behaviour.
+#
+# The basic usage of Sleepier is:
+#
+# 1. Create an `Array` of `Sleepier::ChildSpec` objects
+# 2. Initialize a `Sleepier::Supervisor` object with the array of `Sleepier::ChildSpec` objects
+# 3. Create a new `Thread` and call `monitor` on the supervisor object within the thread
+# 4. Call `start` on the supervisor
+#
+# Note that `start` will return as soon as the processes are started, and does not wait for them to finish.
+#
+# Features:
+#
+# - Starting and stopping processes
+# - Rapid termination handling
+# - Several process shutdown strategies
+# - Different process lifecycles
+# - Pluggable logging
 module Sleepier
     # The different styles which can be used to manage restarts
     #
@@ -132,6 +150,7 @@ module Sleepier
         end
     end
 
+    # `Sleepier::Supervisor` manages a set of `Sleepier::ChildSpec` objects according to the guidance passed to it via the constructor.
     class Supervisor < Object
         # @todo implement strategies other than :one_for_one
         #

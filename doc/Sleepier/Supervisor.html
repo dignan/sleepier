@@ -99,7 +99,17 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p><code>Sleepier::Supervisor</code> manages a set of <code>Sleepier::ChildSpec</code> objects according to the guidance passed to it via the constructor.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
   <h2>Constant Summary</h2>
   
     <dl class="constants">
@@ -411,24 +421,24 @@
       <pre class="lines">
 
 
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165</pre>
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 170</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_child_specs'>child_specs</span><span class='comma'>,</span> <span class='id identifier rubyid_restart_strategy'>restart_strategy</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_count'>max_restart_count</span><span class='op'>=</span><span class='int'>3</span><span class='comma'>,</span> <span class='id identifier rubyid_max_restart_window'>max_restart_window</span><span class='op'>=</span><span class='int'>5</span><span class='rparen'>)</span>
     <span class='ivar'>@child_specs</span> <span class='op'>=</span> <span class='const'>Hash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -533,23 +543,23 @@
       <pre class="lines">
 
 
-231
-232
-233
-234
-235
-236
-237
-238
-239
-240
-241
-242
-243
-244</pre>
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 231</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 250</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_handle_finished_process'>handle_finished_process</span><span class='lparen'>(</span><span class='id identifier rubyid_pid'>pid</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
     <span class='ivar'>@child_specs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_child_id'>child_id</span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='op'>|</span>
@@ -602,23 +612,23 @@
       <pre class="lines">
 
 
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183</pre>
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 170</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 189</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_monitor'>monitor</span>
     <span class='kw'>while</span> <span class='kw'>true</span>
@@ -664,15 +674,15 @@
       <pre class="lines">
 
 
-186
-187
-188
-189
-190
-191</pre>
+205
+206
+207
+208
+209
+210</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 205</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span>
     <span class='ivar'>@child_specs</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_child_id'>child_id</span><span class='comma'>,</span> <span class='id identifier rubyid_child_spec'>child_spec</span><span class='op'>|</span>
@@ -729,13 +739,13 @@
       <pre class="lines">
 
 
-196
-197
-198
-199</pre>
+215
+216
+217
+218</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 196</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 215</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_new_child'>start_new_child</span><span class='lparen'>(</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='rparen'>)</span>
     <span class='ivar'>@child_specs</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_spec'>child_spec</span><span class='period'>.</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_child_spec'>child_spec</span>
@@ -771,18 +781,18 @@
       <pre class="lines">
 
 
-247
-248
-249
-250
-251
-252
-253
-254
-255</pre>
+266
+267
+268
+269
+270
+271
+272
+273
+274</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 247</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 266</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_process'>start_process</span><span class='lparen'>(</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_child_spec'>child_spec</span> <span class='op'>=</span> <span class='ivar'>@child_specs</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbracket'>]</span>
@@ -849,27 +859,27 @@
       <pre class="lines">
 
 
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223</pre>
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'lib/sleepier.rb', line 225</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_terminate_child'>terminate_child</span><span class='lparen'>(</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_child_spec'>child_spec</span> <span class='op'>=</span> <span class='ivar'>@child_specs</span><span class='lbracket'>[</span><span class='id identifier rubyid_child_id'>child_id</span><span class='rbracket'>]</span>
@@ -899,7 +909,7 @@
 </div>
 
     <div id="footer">
-  Generated on Wed Dec  4 18:01:55 2013 by
+  Generated on Thu Dec  5 12:50:08 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.3 (ruby-1.9.2).
 </div>

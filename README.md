@@ -11,4 +11,4 @@ See examples directory for usage examples
 Documentation
 ===============
 
-To generate documentation run yard doc -m markdown
+To generate documentation run `yard doc`
